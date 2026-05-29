@@ -488,11 +488,19 @@ import { projects } from '../data/projects';
 		}
 
 		.project-visual {
-			height: 15rem;
+			height: auto;
+			overflow: visible;
+			align-items: start;
 		}
 
 		.project-visual.split {
 			grid-template-columns: 6.5rem 1fr;
+		}
+
+		.project-preview-image {
+			height: auto;
+			object-fit: initial;
+			object-position: initial;
 		}
 
 		.ui-phone,
