@@ -231,11 +231,13 @@ const schemaData =
 	}
 
 	.shared-nav a:hover,
+	.shared-menu-trigger:hover {
+		opacity: 0.68;
+	}
+
 	.shared-nav a:focus-visible,
-	.shared-menu-trigger:hover,
 	.shared-menu-trigger:focus-visible {
 		opacity: 0.68;
-		outline: none;
 	}
 
 	.shared-menu-panel {
@@ -274,7 +276,6 @@ const schemaData =
 	.shared-menu-panel a:focus-visible {
 		background: var(--muted);
 		text-decoration: none;
-		outline: none;
 	}
 
 	.shared-nav-toggle {
@@ -343,7 +344,6 @@ const schemaData =
 	.shared-mobile-submenu-trigger:hover,
 	.shared-mobile-submenu-trigger:focus-visible {
 		background: var(--muted);
-		outline: none;
 	}
 
 	.shared-mobile-submenu-trigger {
@@ -431,7 +431,6 @@ const schemaData =
 	.shared-footer-links a:hover,
 	.shared-footer-links a:focus-visible {
 		text-decoration: underline;
-		outline: none;
 	}
 
 	.shared-footer-meta {
@@ -487,7 +486,6 @@ const schemaData =
 	.shared-footer-legal a:hover,
 	.shared-footer-legal a:focus-visible {
 		text-decoration: underline;
-		outline: none;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
