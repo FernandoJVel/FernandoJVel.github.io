@@ -16,7 +16,7 @@ export const siteConfig = {
 	],
 	ogImage: '/og-image.svg',
 	navLinks: [
-		{ href: '/#work', label: 'Work' },
+		{ href: '/work', label: 'Work' },
 		{ href: '/about', label: 'About' },
 		{ href: '/resume', label: 'Resume' },
 	],

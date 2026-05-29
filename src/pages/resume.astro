@@ -1,6 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import figmaLogo from '../assets/logos/figma.svg?url';
+import framerLogo from '../assets/logos/framer.svg?url';
+import shopifyLogo from '../assets/logos/shopify.svg?url';
+import webflowLogo from '../assets/logos/webflow.svg?url';
+
+const tools = [
+	{ name: 'Figma', logo: figmaLogo, tone: 'light' },
+	{ name: 'Framer', logo: framerLogo, tone: 'dark' },
+	{ name: 'Shopify', logo: shopifyLogo, tone: 'light' },
+	{ name: 'Webflow', logo: webflowLogo, tone: 'light' },
+];
 ---
 
 <Layout title="Resume | Alba Studio" description="Resume page for a UX designer portfolio.">
@@ -18,10 +29,6 @@ import SiteHeader from '../components/SiteHeader.astro';
 						My work has focused on product clarity: helping teams bring structure to messy
 						workflows, overloaded interfaces, and growing systems that need to scale without
 						becoming harder to use.
-					</p>
-					<p class="hero-note">
-						I work across product strategy, interface design, and design systems, with a strong
-						bias toward products where clarity has real operational value.
 					</p>
 				</div>
 			</section>
@@ -89,6 +96,24 @@ import SiteHeader from '../components/SiteHeader.astro';
 					</p>
 				</div>
 			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Tools</p>
+				</div>
+				<div class="tools-grid">
+					{
+						tools.map((tool) => (
+							<div class="tool-card">
+								<div class:list={['tool-mark', tool.tone === 'dark' && 'tool-mark-dark']} aria-hidden="true">
+									<img class="tool-logo" src={tool.logo} alt="" loading="lazy" decoding="async" />
+								</div>
+								<p class="tool-name">{tool.name}</p>
+							</div>
+						))
+					}
+				</div>
+			</section>
 		</main>
 	</div>
 </Layout>
@@ -122,21 +147,15 @@ import SiteHeader from '../components/SiteHeader.astro';
 
 	.hero-subgrid {
 		display: grid;
-		grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
-		gap: 2rem;
+		grid-template-columns: 1fr;
 		margin-top: 1.75rem;
 	}
 
 	.hero-text,
-	.hero-note,
 	.story-block p {
 		font-size: 1.08rem;
 		line-height: 1.7;
 		margin: 0;
-	}
-
-	.hero-note {
-		color: var(--muted-foreground);
 	}
 
 	.editorial-section {
@@ -161,6 +180,57 @@ import SiteHeader from '../components/SiteHeader.astro';
 		color: var(--foreground);
 	}
 
+	.tools-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+		max-width: 44rem;
+	}
+
+	.tool-card {
+		display: flex;
+		align-items: center;
+		gap: 0.9rem;
+		padding: 1rem 1.05rem;
+		border: 1px solid var(--border);
+		border-radius: 1.15rem;
+		background: #ffffff;
+	}
+
+	.tool-mark {
+		width: 3rem;
+		height: 3rem;
+		flex: 0 0 3rem;
+		display: grid;
+		place-items: center;
+		border-radius: 0.9rem;
+		background: linear-gradient(180deg, #f7f7f7 0%, #ececec 100%);
+		border: 1px solid #e0e0e0;
+		font-size: 0.95rem;
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		color: var(--foreground);
+	}
+
+	.tool-mark-dark {
+		background: #111111;
+		border-color: #111111;
+	}
+
+	.tool-logo {
+		width: 1.55rem;
+		height: 1.55rem;
+		display: block;
+		object-fit: contain;
+	}
+
+	.tool-name {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+	}
+
 	@media (max-width: 980px) {
 		.hero-subgrid {
 			grid-template-columns: 1fr;
@@ -182,9 +252,12 @@ import SiteHeader from '../components/SiteHeader.astro';
 		}
 
 		.hero-text,
-		.hero-note,
 		.story-block p {
 			font-size: 1.05rem;
+		}
+
+		.tools-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>

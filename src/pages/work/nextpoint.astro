@@ -1,6 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
+import nextpointImage from '../../assets/images/nextpoint.webp';
+import nextpointTranscriptsImage from '../../assets/images/nextpoint-transcripts.webp';
 
 const highlights = [
 	{ label: 'Client', value: 'Nextpoint' },
@@ -50,11 +53,13 @@ const outcomes = [
 			</section>
 
 			<section class="lead-image-section">
-				<img
+				<Image
 					class="lead-image"
-					src="/nextpoint.webp"
+					src={nextpointImage}
 					alt="Nextpoint dashboard showing transcript metrics, AI summary, and recent transcript activity"
 					decoding="async"
+					widths={[720, 1080, 1440]}
+					sizes="(max-width: 78rem) 100vw, 78rem"
 				/>
 			</section>
 
@@ -105,12 +110,14 @@ const outcomes = [
 			</section>
 
 			<section class="supporting-image-section">
-				<img
+				<Image
 					class="supporting-image"
-					src="/nextpoint-transcripts.webp"
+					src={nextpointTranscriptsImage}
 					alt="Nextpoint transcripts view showing transcript summaries and related actions"
 					loading="lazy"
 					decoding="async"
+					widths={[720, 1080, 1440]}
+					sizes="(max-width: 78rem) 100vw, 78rem"
 				/>
 			</section>
 

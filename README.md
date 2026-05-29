@@ -1,14 +1,17 @@
-# Alba
+# Alba - Astro Theme for UI/UX and Product Designers
 
-Alba is a clean Astro portfolio template for UX designers, product designers, and visual product thinkers.
+Alba is a clean Astro portfolio theme for UI/UX designers, product designers, and visual product thinkers.
 
 It includes:
 
 - a polished portfolio homepage
+- a dedicated Works page with pagination
 - a sample case study page
 - About and Resume pages
+- self-hosted tool logos on the Resume page
 - Privacy, Terms, and 404 pages
 - shared header/footer/navigation
+- Astro-optimized responsive portfolio images
 - MDX support
 - sitemap generation
 - Open Graph and Twitter meta tags
@@ -86,10 +89,27 @@ Main pages:
 - `/`
 - `/about`
 - `/resume`
+- `/work`
 - `/work/nextpoint`
 - `/privacy`
 - `/terms`
 - `/404`
+
+## Images and Assets
+
+Portfolio images live in:
+
+- [src/assets/images](./src/assets/images)
+
+Tool logos live in:
+
+- [src/assets/logos](./src/assets/logos)
+
+Notes:
+
+- Portfolio and case study screenshots use Astro's image pipeline for responsive optimized output.
+- Tool logos are self-hosted SVGs.
+- `public/` is reserved for files that should be served as-is, such as favicons and the Open Graph image.
 
 There is also a starter MDX content example in:
 
