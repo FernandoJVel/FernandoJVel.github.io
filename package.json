@@ -1,7 +1,22 @@
 {
-  "name": "maria-portfolio",
+  "name": "maria-astro-theme",
+  "description": "A clean Astro portfolio theme for UX designers and product designers.",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "astro-theme",
+    "astro",
+    "portfolio",
+    "ux",
+    "designer",
+    "tailwindcss"
+  ],
+  "homepage": "https://maria-lake.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreialba/maria.git"
+  },
   "engines": {
     "node": ">=22.12.0"
   },

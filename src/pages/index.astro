@@ -42,53 +42,15 @@ import { projects } from '../data/projects';
 									<h2 class="project-title">{project.title}</h2>
 
 									<div class={`project-visual ${project.variant}`}>
-										{project.variant === 'desktop' && (
-											<Image
-												class={project.imageClass}
-												src={project.image}
-												alt={project.alt}
-												loading={index < 2 ? 'eager' : 'lazy'}
-												decoding="async"
-												widths={[480, 720, 960]}
-												sizes="(max-width: 980px) 100vw, 50vw"
-											/>
-										)}
-
-										{project.variant === 'split' && (
-											<Image
-												class={project.imageClass}
-												src={project.image}
-												alt={project.alt}
-												loading={index < 2 ? 'eager' : 'lazy'}
-												decoding="async"
-												widths={[480, 720, 960]}
-												sizes="(max-width: 980px) 100vw, 50vw"
-											/>
-										)}
-
-										{project.variant === 'mobile' && (
-											<Image
-												class={project.imageClass}
-												src={project.image}
-												alt={project.alt}
-												loading={index < 2 ? 'eager' : 'lazy'}
-												decoding="async"
-												widths={[480, 720, 960]}
-												sizes="(max-width: 980px) 100vw, 50vw"
-											/>
-										)}
-
-										{project.variant === 'board' && (
-											<Image
-												class={project.imageClass}
-												src={project.image}
-												alt={project.alt}
-												loading={index < 2 ? 'eager' : 'lazy'}
-												decoding="async"
-												widths={[480, 720, 960]}
-												sizes="(max-width: 980px) 100vw, 50vw"
-											/>
-										)}
+										<Image
+											class={project.imageClass}
+											src={project.image}
+											alt={project.alt}
+											loading={index < 2 ? 'eager' : 'lazy'}
+											decoding="async"
+											widths={[480, 720, 960]}
+											sizes="(max-width: 980px) 100vw, 50vw"
+										/>
 									</div>
 								</article>
 							</a>

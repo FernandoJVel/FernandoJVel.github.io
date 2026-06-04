@@ -59,7 +59,7 @@ npm run preview
 
 The main template settings live in:
 
-- [site.config.mjs](./site.config.mjs)
+- [src/config/site.ts](./src/config/site.ts)
 
 Update this file before publishing:
 
@@ -167,6 +167,8 @@ Main pages:
 
 - `/`
 - `/about`
+- `/notes`
+- `/notes/getting-started`
 - `/resume`
 - `/work`
 - `/work/nextpoint`
@@ -174,6 +176,8 @@ Main pages:
 - `/cookies`
 - `/terms`
 - `/404`
+
+At the moment, `Nextpoint` is the only fully built case study page in the theme. The other homepage project cards intentionally point to `/work/nextpoint` as placeholders until you add their own case study pages.
 
 ## Images and Assets
 
@@ -196,12 +200,16 @@ There is also a starter MDX content example in:
 
 - [src/content/pages/getting-started.mdx](./src/content/pages/getting-started.mdx)
 
+Those MDX entries are rendered by the `/notes` section, so adding new files under `src/content/pages/` will automatically create new note pages at `/notes/[slug]`.
+
 ## Deployment
 
 Included config:
 
 - [netlify.toml](./netlify.toml)
 - [vercel.json](./vercel.json)
+
+If you only deploy to one platform, delete the other config file before wiring up CI so platform auto-detection stays predictable.
 
 ## License
 
@@ -210,5 +218,5 @@ This project is licensed under the [MIT License](./LICENSE).
 ## Notes
 
 - Replace the example project copy and images with your own work.
-- Replace `https://your-domain.com` in [site.config.mjs](./site.config.mjs) before deploying.
+- Replace the demo URL in [src/config/site.ts](./src/config/site.ts) before deploying.
 - The social share image is a template default and can be replaced with your own branded preview.

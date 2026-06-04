@@ -2,6 +2,7 @@
 import { siteConfig } from '../config/site';
 
 const { showCta = true } = Astro.props;
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="shared-footer">
@@ -39,7 +40,7 @@ const { showCta = true } = Astro.props;
 						Cookie Preferences
 					</button>
 				</div>
-				<p>&copy; 2026 {siteConfig.name}. Sample Astro portfolio theme for presentation purposes.</p>
+				<p>&copy; {currentYear} {siteConfig.name}. Sample Astro portfolio theme for presentation purposes.</p>
 			</div>
 		</div>
 	</div>
