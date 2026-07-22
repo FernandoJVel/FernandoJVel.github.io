@@ -68,7 +68,7 @@ export const siteConfig: SiteConfig = {
 		{ href: '/terms', label: 'Terms' },
 	],
 	socialLinks: [
-		{ href: 'https://www.linkedin.com/', label: 'LinkedIn' },
-		{ href: 'https://dribbble.com/', label: 'Dribbble' },
+		{ href: 'https://www.linkedin.com/in/fernandovelqa', label: 'LinkedIn' },
+		{ href: 'https://github.com/FernandoJVel', label: 'Dribbble' },
 	],
 };
