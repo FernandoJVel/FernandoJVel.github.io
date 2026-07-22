@@ -51,8 +51,8 @@ export const siteConfig: SiteConfig = {
 	],
 	ogImage: '/og-image.svg',
 	navLinks: [
-		{ href: '/about', label: 'about' },
-		{ href: '/projects', label: 'Projects' },
+		{ href: '/work', label: 'Work' },
+		{ href: '/about', label: 'About' },
 		{ href: '/resume', label: 'Resume' },
 	],
 	extraPages: [
