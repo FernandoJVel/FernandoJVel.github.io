@@ -8,7 +8,7 @@ import { siteConfig } from './src/config/site.ts';
 const usingFallbackSiteUrl =
 	!process.env.SITE_URL &&
 	!process.env.PUBLIC_SITE_URL &&
-	siteConfig.siteUrl === 'https://maria-lake.vercel.app';
+	siteConfig.siteUrl === 'https://FernandoJVel.github.io';
 
 if (usingFallbackSiteUrl) {
 	console.warn(
