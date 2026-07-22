@@ -26,26 +26,33 @@ const normalizedSiteUrl = (envSiteUrl || defaultSiteUrl).replace(/\/+$/, '');
 
 export const siteConfig: SiteConfig = {
 	name: 'Fernando Velasco',
-	title: 'Maria | Astro Theme for UI/UX Designer Portfolios',
+	title: 'Fernando Velasco | Junior QA Engineer ',
 	description:
-		'A clean Astro theme for UI/UX designer portfolios, case studies, and modern product design presentations.',
+		'Portfolio of Fernando Velasco, Junior QA Engineer specializing in Manual Testing, API Testing, Selenium, Python, and SQL.',
 	// Set SITE_URL or PUBLIC_SITE_URL to keep canonicals, robots.txt, and the sitemap aligned in each environment.
 	siteUrl: normalizedSiteUrl,
-	email: 'hello@maria.com',
+	email: 'fernandovelqa@gmail.com',
 	locale: 'en-US',
-	authorName: 'Maria',
-	authorRole: 'UX Designer',
+	authorName: 'Fernando Velasco',
+	authorRole: 'Junior Bilingual QA Engineer',
 	keywords: [
-		'Astro UI UX portfolio theme',
-		'UI UX designer portfolio template',
-		'Astro portfolio template',
-		'product designer portfolio theme',
-		'case study portfolio theme',
+		'QA Engineer',
+		'Junior QA Engineer',
+		'Software Testing',
+		'Automation Testing',
+		'Manual Testing',
+		'API Testing',
+		'Selenium',
+		'Python',
+		'Postman',
+		'SQL',
+		'QA Portfolio',
+		'Software Quality Assurance'
 	],
 	ogImage: '/og-image.svg',
 	navLinks: [
-		{ href: '/work', label: 'Work' },
-		{ href: '/about', label: 'About' },
+		{ href: '/about', label: 'about' },
+		{ href: '/projects', label: 'Projects' },
 		{ href: '/resume', label: 'Resume' },
 	],
 	extraPages: [
